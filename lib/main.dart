@@ -4,10 +4,11 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:http_get_method/firstpage.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: demo(),
+    home: firstpage(),
   ));
 }
 
@@ -34,7 +35,7 @@ class _demoState extends State<demo> {
     //get data get
     //post data put
 //https://jsonplaceholder.typicode.com/posts
-    //https://reqres,in/api/users/2
+    //https://reqres.in/api/users/2
     /*var url = Uri.https('jsonplaceholder.typicode.com', '/posts');
     var response = await http.get(url);
     print('Response status: ${response.statusCode}');
@@ -101,7 +102,7 @@ class _demoState extends State<demo> {
                 return ListTile(
                   //title: Text("Page=${m!.page}"),
                   title: Text("Page=${m!.page}\nPerpage=${m!.perPage}\nTotal=${m!.total}\nTotalpages=${m!.totalPages}"),
-                  subtitle: Text("Support=${m!.support!.url}\n${m!.support!.text}"),
+                  subtitle: Text("Data=${m!.data!.length}\nSupport=${m!.support!.url}\n${m!.support!.text}"),
 
                 );
               },
