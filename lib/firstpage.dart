@@ -25,7 +25,7 @@ class _firstpageState extends State<firstpage> {
 
   get() async {
     try {
-      var url = Uri.https('dwija.000webhostapp.com', 'change.php');
+      var url = Uri.https('dwija.000webhostapp.com','change.php');
       var response = await http.get(url);
       print('Response status: ${response.statusCode}');
       print('Response body: ${response.body}');
